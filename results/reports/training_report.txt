@@ -1,0 +1,33 @@
+TURKISH SUPER LEAGUE MATCH PREDICTION - TRAINING REPORT
+======================================================================
+
+Dataset: 17408 matches
+Features: 42
+Train/Test Split: 13926/3482
+
+MODEL PERFORMANCE
+======================================================================
+        Model  Accuracy  F1-Score  CV Accuracy   CV Std
+Random Forest  0.513498  0.454869     0.521543 0.008904
+     LightGBM  0.511200  0.469512     0.506679 0.008142
+      XGBoost  0.490523  0.461202     0.496123 0.010939
+
+Best Model: Random Forest
+Test Accuracy: 0.5135
+
+Classification Report (Random Forest):
+======================================================================
+              precision    recall  f1-score   support
+
+    Away Win       0.44      0.31      0.37       797
+        Draw       0.31      0.10      0.15       982
+    Home Win       0.56      0.84      0.67      1703
+
+    accuracy                           0.51      3482
+   macro avg       0.43      0.42      0.40      3482
+weighted avg       0.46      0.51      0.45      3482
+
+Confusion Matrix:
+[[ 251   98  448]
+ [ 184  100  698]
+ [ 141  125 1437]]
